@@ -10,4 +10,3 @@ Run ใน Visual Studio Code
 
 เข้า Link ที่ขึ้นมา
 
-(ส่วนของ Chechbox ยังทำไม่เสร็จครับ)
