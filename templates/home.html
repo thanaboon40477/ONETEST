@@ -1,0 +1,48 @@
+{% extends "nostaticLayout.html" %}
+{% block content %}
+
+<br><br><br><br>
+
+<div id="app">
+    <v-app id="inspire">
+        <v-form>
+            <v-container>
+                <center>
+                    <v-btn
+                        type="submit"
+                        color="primary"
+                        @click='nextpage'>
+                    Next Page</v-btn>
+                </center>
+            </v-container>
+        </v-form>
+    </v-app>
+
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        vuetify: new Vuetify(),
+        data: () => ({
+
+        }),
+        methods:{
+            nextpage(){
+                const path = '/';
+                axios.post(path)
+                .then(() => {
+                   console.log("success")
+                   window.location = '/testtable'
+               })
+                .catch((err) => {
+                    console.log(err)
+                })
+            }
+        },
+        delimiters: ["[[", "]]"]
+    })
+</script>
+
+
+{% endblock %}
