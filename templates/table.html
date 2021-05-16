@@ -2,10 +2,12 @@
 {% block content %}
 <br><br><br>
 <div id='app'>
+    <span class="bg"></span>
     <v-app id=inspire>
         <v-container>
             <v-card-title>
             <v-text-field
+            style="margin-top: 25px;"
                 v-model="search"
                 append-icon="mdi-magnify"
                 label="Search"
@@ -298,5 +300,9 @@
     })
 
 </script>
+
+<style>
+    @import "/static/css/bg_color.css";
+</style>
 
 {% endblock %}
